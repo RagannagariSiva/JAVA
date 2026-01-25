@@ -1,0 +1,22 @@
+package OperationStrings;
+
+import java.util.Scanner;
+
+public class CountSumNumbersString {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the Word: ");
+		String s=sc.nextLine();
+		sc.close();
+		int sum=0;
+		for(int i=0;i<s.length();i++) {
+			if(Character.isDigit(s.charAt(i)))
+			{
+				sum=sum+Character.getNumericValue(s.charAt(i));
+			}
+		}
+		System.out.println("Sum of all the digits prasent in String: "+sum);
+	}
+
+}
